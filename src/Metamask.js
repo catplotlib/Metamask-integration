@@ -10,9 +10,10 @@ const Metamask = () => {
   const [loggedIn, setLoggedIn] = useState(false);
   const ethEnabled = async () => {
     if (window.ethereum) {
+
       setTimeout(() => {
         setLoggedIn((loggedIn) => !loggedIn);
-      }, 5000);
+      }, 2000);
 
       await window.ethereum.send("eth_requestAccounts");
       window.web3 = new Web3(window.ethereum);
